@@ -1,0 +1,11 @@
+__pycache__
+*.pyc
+*.log
+*.csv
+*.db
+*.xls
+*.xlsx
+*.egg-info
+docs/build
+
+

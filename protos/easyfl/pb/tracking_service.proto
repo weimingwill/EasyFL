@@ -1,0 +1,115 @@
+syntax = "proto3";
+
+package easyfl.pb;
+import "easyfl/pb/common.proto";
+
+message TrackTaskMetricRequest{
+    TaskMetric task_metric = 1;
+}
+
+message TrackTaskMetricResponse{
+    Status status = 1;
+}
+
+message TrackRoundMetricRequest{
+    RoundMetric round_metric = 1;
+}
+
+message TrackRoundMetricResponse{
+    Status status = 1;
+}
+
+message TrackClientMetricRequest{
+    repeated ClientMetric client_metrics = 1;
+}
+
+message TrackClientMetricResponse{
+    Status status = 1;
+}
+
+
+message TrackClientTrainMetricRequest{
+    string task_id = 1;
+    int32 round_id = 2;
+    string client_id = 3;
+    repeated float train_loss = 4;
+    float train_time = 5;
+    float train_upload_time = 6;
+    float train_download_size = 7;
+    float train_upload_size = 8;
+}
+
+message TrackClientTrainMetricResponse{
+    Status status = 1;
+}
+
+message TrackClientTestMetricRequest{
+    string task_id = 1;
+    int32 round_id = 2;
+    string client_id = 3;
+    float test_accuracy = 4;
+    float test_loss = 5;
+    float test_time = 6;
+    float test_upload_time = 7;
+    float test_download_size = 8;
+}
+
+message TrackClientTestMetricResponse{
+    Status status = 1;
+}
+
+message GetRoundTrainTestTimeRequest{
+    string task_id = 1;
+    int32 rounds = 2;
+    int32 interval = 3;
+}
+
+message TrainTestTime{
+    int32 round_id = 1;
+    float time = 2;
+}
+
+message GetRoundTrainTestTimeResponse{
+    repeated TrainTestTime train_test_times = 1;
+    Status status = 2;
+}
+
+message GetRoundMetricsRequest {
+    string task_id = 1;
+    // empty list means get all rounds;
+    repeated int32 rounds = 2;
+}
+
+message GetRoundMetricsResponse {
+    string task_id = 1;
+    int32 round_id = 2;
+    repeated RoundMetric metrics = 3;
+    Status status = 4;
+}
+
+message GetClientMetricsRequest {
+    string task_id = 1;
+    int32 round_id = 2;
+    repeated string client_ids = 3;
+}
+
+message GetClientMetricsResponse {
+    string task_id = 1;
+    int32 round_id = 2;
+    repeated ClientMetric metrics = 3;
+    Status status = 4;
+}
+
+
+service TrackingService {
+    rpc TrackTaskMetric(TrackTaskMetricRequest) returns (TrackTaskMetricResponse) {}
+    rpc TrackRoundMetric(TrackRoundMetricRequest) returns (TrackRoundMetricResponse) {}
+    rpc TrackClientMetric(TrackClientMetricRequest) returns (TrackClientMetricResponse) {}
+
+    rpc TrackClientTrainMetric(TrackClientTrainMetricRequest) returns (TrackClientTrainMetricResponse) {}
+    rpc TrackClientTestMetric(TrackClientTestMetricRequest) returns (TrackClientTestMetricResponse) {}
+
+    rpc GetRoundMetrics(GetRoundMetricsRequest) returns (GetRoundMetricsResponse) {}
+    rpc GetClientMetrics(GetClientMetricsRequest) returns (GetClientMetricsResponse) {}
+    rpc GetRoundTrainTestTime(GetRoundTrainTestTimeRequest) returns (GetRoundTrainTestTimeResponse) {}
+}

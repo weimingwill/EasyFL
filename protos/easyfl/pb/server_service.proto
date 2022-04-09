@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package easyfl.pb;
+import "easyfl/pb/common.proto";
+
+message UploadRequest {
+    string task_id = 1;
+    int32 round_id = 2;
+    string client_id = 3;
+    UploadContent content = 4;
+}
+
+message UploadContent {
+    // Data is the marshaled data, value depends on data type.
+    bytes data = 1;
+    // Type of data.
+    DataType type = 2;
+    // optional, number of data point
+    int64 data_size = 3;
+    // optional, client metric
+    ClientMetric metric = 4;
+    // optional, extra upload content
+    bytes extra = 99;
+}
+
+message Performance {
+    float accuracy = 1;
+    float loss = 2;
+}
+
+message UploadResponse {
+    Status status = 1;
+}
+
+message RunRequest {
+    bytes model = 1;
+    // Optional, run server with provided clients.
+    repeated Client clients = 2;
+    // [Deprecated] Optional, run server with client addresses getting from etcd.
+    string etcd_addresses = 3;
+}
+
+message RunResponse {
+    Status status = 1;
+}
+
+message StopRequest {}
+
+message StopResponse {
+    Status status = 1;
+}
+
+message Client {
+    string client_id = 1;
+    string address = 2;
+    int32 index = 3;
+}
+
+service ServerService {
+    rpc Upload (UploadRequest) returns (UploadResponse) {}
+    rpc Run (RunRequest) returns (RunResponse) {}
+    rpc Stop (StopRequest) returns (StopResponse) {}
+}

@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: easyfl-client
+  namespace: easyfl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: easyfl-client
+  template:
+    metadata:
+      labels:
+        app: easyfl-client
+    spec:
+      containers:
+      - name: easyfl-client
+        image: easyfl-client
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: PYTHONUNBUFFERED
+          value: "1"
+        args: ["--is-remote", "True", "--local-port", "23400", "--server-addr", "easyfl-server-svc.easyfl:23501", "--tracker-addr", "easyfl-tracker-svc.easyfl:12666"]
+        ports:
+        - containerPort: 23501
+        volumeMounts:
+          - mountPath: /app/easyfl/datasets/femnist/data
+            name: data-volume
+      volumes:
+      - name: data-volume
+        hostPath:
+          path: /home/zwm/easyfl/easyfl/datasets/femnist/data
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"
+      nodeSelector:
+        kubernetes.io/hostname: "node1"

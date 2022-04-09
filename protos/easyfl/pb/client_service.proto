@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+import "easyfl/pb/common.proto";
+
+package easyfl.pb;
+
+enum OperationType {
+    OP_TYPE_TRAIN = 0;
+    OP_TYPE_TEST = 1;
+}
+
+message OperateRequest {
+    // Operation type: train or test
+    OperationType type = 1;
+    // Model parameters for client to start next round of training
+    bytes model = 2;
+    // Data index for selecting data partition for training.
+    // Optional, depends on the data loading type of client.
+    int32 data_index = 3;
+    // Configs for executing operation
+    OperateConfig config = 4;
+}
+
+message OperateConfig {
+    int32 batch_size = 1;
+    int32 local_epoch = 2;
+    int64 seed = 3;
+    Optimizer optimizer = 4;
+    // Whether execute test before uploading model.
+    bool local_test = 5;
+    // task id for current operation
+    string task_id = 6;
+    // round id for current operation
+    int32 round_id = 7;
+    // whether to track clients
+    bool track = 8;
+    // testing batch size
+    int32 test_batch_size = 9;
+}
+
+message Optimizer {
+    string type = 1;
+    float lr = 2;
+    float momentum = 3;
+}
+
+message OperateResponse {
+    Status status = 1;
+}
+
+service ClientService {
+    rpc Operate (OperateRequest) returns (OperateResponse) {}
+}

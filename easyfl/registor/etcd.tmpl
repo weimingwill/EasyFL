@@ -1,0 +1,37 @@
+
+#!/usr/bin/python
+
+import etcd3
+import sys
+
+etcd_host = "{{ .Env.ETCD_HOST }}"
+if not etcd_host:
+    print("ETCD_HOST not set")
+    sys.exit(1)
+
+port = 2379
+host = etcd_host
+
+if ":" in etcd_host:
+    host, port = etcd_host.split(":")
+
+print("{}:{}".format(host, port))
+
+client = etcd3.client(host=host, port=int(port))
+
+{{ $local := . }}
+{{ range $key, $value := . }}
+
+    {{ $addrLen := len $value.Addresses }}
+
+    {{ if gt $addrLen 0 }}
+
+        {{ with $address := index $value.Addresses 0 }}
+            {{ if $address.HostPort}}
+
+client.put("/backends/{{ $value.Image.Repository }}/{{ $local.Env.HOST_IP }}:{{ $address.HostPort }}", "{{ $value.Name }}")
+
+            {{end}}
+        {{end}}
+    {{end}}
+{{end}}

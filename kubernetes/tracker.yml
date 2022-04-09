@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: easyfl-tracker
+  namespace: easyfl
+  labels:
+    app: easyfl-tracker
+spec:
+  containers:
+  - name: easyfl-tracker
+    image: easyfl-tracker
+    imagePullPolicy: IfNotPresent
+    env:
+    - name: PYTHONUNBUFFERED
+      value: "1"
+    args: ["--local-port", "12666"]
+    ports:
+    - containerPort: 12666
+  nodeSelector:
+    kubernetes.io/hostname: "node1"

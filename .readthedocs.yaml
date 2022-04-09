@@ -1,0 +1,16 @@
+version: 2
+
+formats: all
+
+sphinx:
+  fail_on_warning: false
+  
+
+python:
+  # Install our python package before building the docs
+  version: 3.7
+  install:
+    - method: pip
+      path: .
+    - requirements: requirements/docs.txt
+    - requirements: requirements/readthedocs.txt

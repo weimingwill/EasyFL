@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package easyfl.pb;
+
+enum StatusCode {
+    SC_OK = 0;
+    SC_UNKNOWN = 1;
+    SC_INVALID_REQUEST = 2;
+    SC_DEADLINE_EXCEEDED = 3;
+    SC_NOT_FOUND = 4;
+    SC_ALREADY_EXISTS = 5;
+}
+
+message Status {
+    StatusCode code = 1;
+    string message = 2;
+}
+
+enum DataType {
+    // Model parameters or gradients
+    DATA_TYPE_PARAMS = 0;
+    // Performance
+    DATA_TYPE_PERFORMANCE = 1;
+}
+
+message TaskMetric {
+    string task_id = 1;
+    string configuration = 2;
+}
+
+message RoundMetric {
+    string task_id = 1;
+    int32 round_id = 2;
+    float test_accuracy = 3;
+    float test_loss = 4;
+    float round_time = 5;
+    float train_time = 6;
+    float test_time = 7;
+    float train_distribute_time = 8;
+    float test_distribute_time = 9;
+    float train_upload_size = 10;
+    float train_download_size = 11;
+    float test_upload_size = 12;
+    float test_download_size = 13;
+    string extra = 14;
+}
+
+message ClientMetric {
+    string task_id = 1;
+    int32 round_id = 2;
+    string client_id = 3;
+    repeated float train_accuracy = 4;
+    repeated float train_loss = 5;
+    float test_accuracy = 6;
+    float test_loss = 7;
+    float train_time = 8;
+    float test_time = 9;
+    float train_upload_time = 10;
+    float test_upload_time = 11;
+    float train_upload_size = 12;
+    float train_download_size = 13;
+    float test_upload_size = 14;
+    float test_download_size = 15;
+    string extra = 16;
+}
