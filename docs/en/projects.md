@@ -1,7 +1,17 @@
 # Projects based on EasyFL
 
-We have built several projects based on EasyFL and published four papers in top-tier conferences and journals. 
-We list them as examples of how to extend EasyFL for your projects.
+We have been doing research on federated learning for several years and published [several papers](https://weiming.me/#publications) in top-tier conferences and journals. EasyFL is developed based on deep insights from our research. It further facilitated us built other federated learning several projects.
+
+## Applications
+
+We have released the following implementations of federated learning applications:
+
+- FedReID: [[code]](https://github.com/EasyFL-AI/EasyFL/tree/master/applications/fedreid) for "Performance Optimization for Federated Person Re-identification via Benchmark Analysis", _ACMMM'2020_.
+
+
+## Papers
+
+The following are the projects and papers built on EasyFL:
 
 - EasyFL: A Low-code Federated Learning Platform For Dummies, _IEEE Internet-of-Things Journal_. [[paper]](https://arxiv.org/abs/2105.07603)
 - Divergence-aware Federated Self-Supervised Learning, _ICLR'2022_. [[paper]](https://openreview.net/forum?id=oVE1z8NlNe)
