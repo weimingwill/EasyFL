@@ -56,7 +56,11 @@ For more advanced usage, we provide a list of tutorials on:
 
 ## Projects & Papers
 
-The following publications are developed using EasyFL.
+We have released the source code for the following papers under the `applications` folder:
+
+- FedReID: [[code]](https://github.com/EasyFL-AI/EasyFL/tree/master/applications/fedreid) for "Performance Optimization for Federated Person Re-identification via Benchmark Analysis", _ACMMM'2020_.
+
+The following publications are developed using EasyFL:
 
 - Divergence-aware Federated Self-Supervised Learning, _ICLR'2022_. [[paper]](https://openreview.net/forum?id=oVE1z8NlNe)
 - Collaborative Unsupervised Visual Representation Learning From Decentralized Data, _ICCV'2021_. [[paper]](https://openaccess.thecvf.com/content/ICCV2021/html/Zhuang_Collaborative_Unsupervised_Visual_Representation_Learning_From_Decentralized_Data_ICCV_2021_paper.html)
