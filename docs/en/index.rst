@@ -1,4 +1,4 @@
-Welcome to MMDetection's documentation!
+Welcome to EasyFL's documentation!
 =======================================
 
 .. toctree::
@@ -9,7 +9,6 @@ Welcome to MMDetection's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Get Started
 
    get_started.md
 

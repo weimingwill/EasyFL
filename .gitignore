@@ -7,5 +7,8 @@ __pycache__
 *.xlsx
 *.egg-info
 docs/build
+dist/
+data/
+saved_models/
 
 
