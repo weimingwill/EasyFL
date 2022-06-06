@@ -6,4 +6,4 @@ kubernetes==11.0.0
 numpy
 omegaconf==2.0.0
 requests==2.24.0
-tqdm==4.32.1
+tqdm
