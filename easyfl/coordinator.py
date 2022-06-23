@@ -43,7 +43,7 @@ class Coordinator(object):
         self._client_class = None
         self.tracker = None
 
-    def init(self, conf, init_all=False):
+    def init(self, conf, init_all=True):
         """Initialize coordinator
 
         Args:
