@@ -6,6 +6,7 @@
 [![docs](https://img.shields.io/badge/docs-latest-blue)](https://easyfl.readthedocs.io/en/latest/)
 [![license](https://img.shields.io/github/license/easyfl-ai/easyfl.svg)](https://github.com/easyfl-ai/easyfl/blob/master/LICENSE)
 [![maintained](https://img.shields.io/badge/Maintained%3F-YES-yellow.svg)](https://github.com/easyfl-ai/easyfl/graphs/commit-activity)
+[![Downloads](https://pepy.tech/badge/easyfl)](https://pepy.tech/project/easyfl)
 
 [📘 Documentation](https://easyfl.readthedocs.io/en/latest/) | [🛠️ Installation](https://easyfl.readthedocs.io/en/latest/get_started.html)
 </div>
