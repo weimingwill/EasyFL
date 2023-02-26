@@ -53,7 +53,7 @@ Currently, we provide the implementation of the baseline and personalized epoch 
 
 ## Citation
 ```
-@inproceedings{zhuang2021joint,
+@inproceedings{zhuang2021fedureid,
   title={Joint optimization in edge-cloud continuum for federated unsupervised person re-identification},
   author={Zhuang, Weiming and Wen, Yonggang and Zhang, Shuai},
   booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
@@ -69,7 +69,7 @@ Currently, we provide the implementation of the baseline and personalized epoch 
   year={2020}
 }
 
-@article{zhuang2023fedired,
+@article{zhuang2023fedreid,
   title={Optimizing performance of federated person re-identification: Benchmarking and analysis},
   author={Zhuang, Weiming and Gan, Xin and Wen, Yonggang and Zhang, Shuai},
   journal={ACM Transactions on Multimedia Computing, Communications and Applications},
