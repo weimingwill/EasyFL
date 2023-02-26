@@ -6,6 +6,7 @@ __pycache__
 *.xls
 *.xlsx
 *.egg-info
+.idea/
 docs/build
 dist/
 data/

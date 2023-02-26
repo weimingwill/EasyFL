@@ -1,0 +1,30 @@
+tid: "fedureid"
+server:
+  test_all: True
+  clients_per_round: 8
+  test_every: 1
+  rounds: 20
+  batch_size: 32
+  random_selection: False
+resource_heterogeneous:
+  grouping_strategy: "none"
+client:
+  local_epoch: 1
+  track: False
+  batch_size: 32
+  optimizer:
+    type: "SGD"
+    lr: 0.05
+    momentum: 0.9
+  buc:
+    batch_size: 16
+    eval_batch_size: 64
+    size_penalty: 0.003
+    merge_percent: 0.05
+    feature_size: 2048
+    upload_frequency: 1
+    global_evaluation: False
+    initial_epochs: 20
+    local_epochs: 1
+test_mode: "test_in_client"
+test_method: "average"
