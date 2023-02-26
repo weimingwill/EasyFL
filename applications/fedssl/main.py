@@ -149,6 +149,8 @@ def run():
             },
         }
         config.update(distribute_config)
+    else:
+        config["gpu"] = args.gpu
 
     if args.semi_supervised:
         train_data, test_data, _ = get_semi_supervised_dataset(args.dataset,
