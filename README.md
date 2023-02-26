@@ -59,22 +59,18 @@ For more advanced usage, we provide a list of tutorials on:
 
 We have released the source code for the following papers under the `applications` folder:
 
-- FedReID: [[code]](https://github.com/EasyFL-AI/EasyFL/tree/master/applications/fedreid) for [Performance Optimization for Federated Person Re-identification via Benchmark Analysis](https://dl.acm.org/doi/10.1145/3394171.3413814) (_ACMMM'2020_).
 - FedSSL: [[code]](https://github.com/EasyFL-AI/EasyFL/tree/master/applications/fedssl) for two papers: [Divergence-aware Federated Self-Supervised Learning](https://openreview.net/forum?id=oVE1z8NlNe) (_ICLR'2022_)  and [Collaborative Unsupervised Visual Representation Learning From Decentralized Data](https://openaccess.thecvf.com/content/ICCV2021/html/Zhuang_Collaborative_Unsupervised_Visual_Representation_Learning_From_Decentralized_Data_ICCV_2021_paper.html) (_ICCV'2021_)
+- FedReID: [[code]](https://github.com/EasyFL-AI/EasyFL/tree/master/applications/fedreid) for two papers: [Performance Optimization for Federated Person Re-identification via Benchmark Analysis](https://dl.acm.org/doi/10.1145/3394171.3413814) (_ACMMM'2020_) and [Optimizing Performance of Federated Person Re-identification: Benchmarking and Analysis](https://dl.acm.org/doi/10.1145/3531013) (_TOMM_)
+- FedUReID: [[code]](https://github.com/EasyFL-AI/EasyFL/tree/master/applications/fedureid) for [Joint Optimization in Edge-Cloud Continuum for Federated Unsupervised Person Re-identification](https://arxiv.org/abs/2108.06493) (_ACMMM'2021_)
 
-The following publications are developed using EasyFL:
-
-- Divergence-aware Federated Self-Supervised Learning, _ICLR'2022_. [[paper]](https://openreview.net/forum?id=oVE1z8NlNe)
-- Collaborative Unsupervised Visual Representation Learning From Decentralized Data, _ICCV'2021_. [[paper]](https://openaccess.thecvf.com/content/ICCV2021/html/Zhuang_Collaborative_Unsupervised_Visual_Representation_Learning_From_Decentralized_Data_ICCV_2021_paper.html)
-- Joint Optimization in Edge-Cloud Continuum for Federated Unsupervised Person Re-identification, _ACMMM'2021_. [[paper]](https://arxiv.org/abs/2108.06493)
 
 :bulb: We will release the source codes of these projects in this repository. Please stay tuned.
 
 We have been doing research on federated learning for several years, the following are our additional publications.
 
 - EasyFL: A Low-code Federated Learning Platform For Dummies, _IEEE Internet-of-Things Journal_. [[paper]](https://arxiv.org/abs/2105.07603)
-- Performance Optimization for Federated Person Re-identification via Benchmark Analysis, _ACMMM'2020_. [[paper]](https://weiming.me/publication/fedreid/)
 - Federated Unsupervised Domain Adaptation for Face Recognition, _ICME'22_. [[paper]](https://weiming.me/publication/fedfr/)
+- Optimizing Federated Unsupervised Person Re-identification via Camera-aware Clustering, _MMSP'22_. [[paper]](https://ieeexplore.ieee.org/abstract/document/9949249/)
 
 ## Join Our Community
 
