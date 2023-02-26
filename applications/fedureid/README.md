@@ -5,6 +5,7 @@ This repository implements federated unsupervised person re-identification (FedU
 The paper is accepted in ACMMM 2021 - **[Joint optimization in edge-cloud continuum for federated unsupervised person re-identification](https://arxiv.org/abs/2108.06493)**
 
 System architecture and workflow.
+
 <img src="images/fedureid.png" width="700">
 
 ## Prerequisite
@@ -58,6 +59,25 @@ Currently, we provide the implementation of the baseline and personalized epoch 
   booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
   pages={433--441},
   year={2021}
+}
+
+@inproceedings{zhuang2020fedreid,
+  title={Performance Optimization of Federated Person Re-identification via Benchmark Analysis},
+  author={Zhuang, Weiming and Wen, Yonggang and Zhang, Xuesen and Gan, Xin and Yin, Daiying and Zhou, Dongzhan and Zhang, Shuai and Yi, Shuai},
+  booktitle={Proceedings of the 28th ACM International Conference on Multimedia},
+  pages={955--963},
+  year={2020}
+}
+
+@article{zhuang2023fedired,
+  title={Optimizing performance of federated person re-identification: Benchmarking and analysis},
+  author={Zhuang, Weiming and Gan, Xin and Wen, Yonggang and Zhang, Shuai},
+  journal={ACM Transactions on Multimedia Computing, Communications and Applications},
+  volume={19},
+  number={1s},
+  pages={1--18},
+  year={2023},
+  publisher={ACM New York, NY}
 }
 ```
 
