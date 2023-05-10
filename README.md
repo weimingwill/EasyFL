@@ -95,3 +95,8 @@ If you use this platform or related projects in your research, please cite this 
   publisher={IEEE}
 }
 ```
+
+## Main Contributors
+
+Zhuang Weiming: [:octocat:](https://github.com/weimingwill)
+Gan Xin: [:octocat:](https://github.com/codergan)
