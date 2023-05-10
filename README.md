@@ -98,5 +98,5 @@ If you use this platform or related projects in your research, please cite this 
 
 ## Main Contributors
 
-Zhuang Weiming [:octocat:](https://github.com/weimingwill) <br/>
-Gan Xin [:octocat:](https://github.com/codergan)
+Weiming Zhuang[:octocat:](https://github.com/weimingwill) <br/>
+Xin Gan [:octocat:](https://github.com/codergan)
