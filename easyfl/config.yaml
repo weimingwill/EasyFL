@@ -62,7 +62,7 @@ server:
   # The strategy to aggregate client uploaded models, options: FedAvg, equal.
     # FedAvg aggregates models using weighted average, where the weights are data size of clients.
     # equal aggregates model by simple averaging.
-  aggregation_stragtegy: "FedAvg"
+  aggregation_strategy: "FedAvg"
   # The content of aggregation, options: all, parameters.
     # all means aggregating models using state_dict, including both model parameters and persistent buffers like BatchNorm stats.
     # parameters means aggregating only model parameters.
