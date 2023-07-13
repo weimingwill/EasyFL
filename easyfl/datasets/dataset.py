@@ -394,7 +394,7 @@ class FederatedTorchDataset(FederatedDataset):
     """Wrapper over PyTorch dataset.
 
     Args:
-        data (dict): A dictionary of client datasets, format {"client_id": loader1, "client_id2": loader2}.
+        data (dict): A dictionary of client datasets, format {"client_id": dataset1, "client_id2": dataset2}.
     """
 
     def __init__(self, data, users):
